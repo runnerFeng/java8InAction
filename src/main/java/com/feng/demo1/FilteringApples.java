@@ -2,6 +2,7 @@ package com.feng.demo1;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 import java.util.function.Predicate;
 
@@ -15,6 +16,17 @@ public class FilteringApples {
         List<Apple> invetory = Arrays.asList(new Apple("green", 80),
                 new Apple("green", 155),
                 new Apple("red", 120));
+
+        // 排序 Comparator实现
+        invetory.sort(new Comparator<Apple>() {
+            @Override
+            public int compare(Apple o1, Apple o2) {
+                return o1.getWeight().compareTo(o2.getWeight());
+            }
+        });
+
+        //排序 lambda实现
+        invetory.sort((Apple o1, Apple o2) -> o1.getWeight().compareTo(o2.getWeight()));
 
         // 将调用和具体实现分离
         // 1.传递方法
