@@ -1,6 +1,7 @@
 package com.feng;
 
 import java.util.ArrayList;
+import java.util.Base64;
 import java.util.List;
 
 /**
@@ -20,5 +21,20 @@ public class Test {
 //    Comparator
         List list = new ArrayList();
         list.sort();
+
+        Base64.Encoder
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
 }
