@@ -4,7 +4,7 @@ import java.io.File;
 import java.io.FileFilter;
 
 /**
- * Desc:
+ * Desc:筛选隐藏文件的方法
  * Created by jinx on 2017/9/26.
  */
 public class Test1 {

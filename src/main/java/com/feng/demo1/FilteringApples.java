@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.function.Predicate;
 
 /**
- * Desc:
+ * Desc:筛选苹果测试
  * Created by jinx on 2017/9/26.
  */
 public class FilteringApples {
