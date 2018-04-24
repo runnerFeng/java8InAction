@@ -18,7 +18,7 @@ public class Test4 {
         Stream.iterate(new int[]{0,1},t->new int[]{t[1],t[0]+t[1]}).limit(20).map(t->t[0]).forEach(System.out::println);
 
         //2.generate静态方法
-
+        Stream.generate(Math::random).limit(10).forEach(System.out::println);
 
     }
 }
