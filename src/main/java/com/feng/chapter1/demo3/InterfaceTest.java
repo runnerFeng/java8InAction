@@ -1,4 +1,4 @@
-package com.feng.demo3;
+package com.feng.chapter1.demo3;
 
 /**
  * Desc:default/static修饰方法

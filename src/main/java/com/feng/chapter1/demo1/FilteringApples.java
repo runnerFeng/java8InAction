@@ -1,4 +1,4 @@
-package com.feng.demo1;
+package com.feng.chapter1.demo1;
 
 import java.util.ArrayList;
 import java.util.Arrays;
