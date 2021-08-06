@@ -13,12 +13,12 @@ import java.util.function.Predicate;
 public class FilteringApples {
 
     public static void main(String[] args) {
-        List<Apple> invetory = Arrays.asList(new Apple("green", 80),
+        List<Apple> inventory = Arrays.asList(new Apple("green", 80),
                 new Apple("green", 155),
                 new Apple("red", 120));
 
         // 排序 Comparator实现
-        invetory.sort(new Comparator<Apple>() {
+        inventory.sort(new Comparator<Apple>() {
             @Override
             public int compare(Apple o1, Apple o2) {
                 return o1.getWeight().compareTo(o2.getWeight());
@@ -26,29 +26,29 @@ public class FilteringApples {
         });
 
         //排序 lambda实现
-        invetory.sort((Apple o1, Apple o2) -> o1.getWeight().compareTo(o2.getWeight()));
+        inventory.sort((Apple o1, Apple o2) -> o1.getWeight().compareTo(o2.getWeight()));
 
         // 将调用和具体实现分离
         // 1.传递方法
         // 绿色苹果
-        List<Apple> greenApples = filterApples(invetory, FilteringApples::isGreenApple);
+        List<Apple> greenApples = filterApples(inventory, FilteringApples::isGreenApple);
         System.out.println(greenApples);
 
         // 大于150g的苹果
-        List<Apple> heavyApples = filterApples(invetory, FilteringApples::isHeavyApple);
+        List<Apple> heavyApples = filterApples(inventory, FilteringApples::isHeavyApple);
         System.out.println(heavyApples);
 
         // 2.lambda
         // 绿色苹果
-        List<Apple> greenApples2 = filterApples(invetory, (Apple a) -> "green".equals(a.getColor()));
+        List<Apple> greenApples2 = filterApples(inventory, (Apple a) -> "green".equals(a.getColor()));
         System.out.println(greenApples2);
 
         // 大于150g的苹果
-        List<Apple> heavyApples2 = filterApples(invetory, (Apple a) -> a.getWeight() > 150);
+        List<Apple> heavyApples2 = filterApples(inventory, (Apple a) -> a.getWeight() > 150);
         System.out.println(heavyApples2);
 
         // 测试
-        List<Apple> weirdApples = filterApples(invetory, (Apple a) -> a.getWeight() < 80 || "brown".equals(a.getColor()));
+        List<Apple> weirdApples = filterApples(inventory, (Apple a) -> a.getWeight() < 80 || "brown".equals(a.getColor()));
         System.out.println(weirdApples);
 
     }
