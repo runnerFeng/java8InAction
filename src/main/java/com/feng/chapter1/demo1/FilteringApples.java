@@ -30,29 +30,36 @@ public class FilteringApples {
 
         // 将调用和具体实现分离
         // 1.传递方法
-        // 绿色苹果
+        // 绿色苹果（自定义短方法）
         List<Apple> greenApples = filterApples(inventory, FilteringApples::isGreenApple);
         System.out.println(greenApples);
 
-        // 大于150g的苹果
+        // 大于150g的苹果（自定义短方法）
         List<Apple> heavyApples = filterApples(inventory, FilteringApples::isHeavyApple);
         System.out.println(heavyApples);
 
+        // 传递方法到Lambda
         // 2.lambda
-        // 绿色苹果
+        // 绿色苹果（使用匿名函数代替自定义短函数）
         List<Apple> greenApples2 = filterApples(inventory, (Apple a) -> "green".equals(a.getColor()));
         System.out.println(greenApples2);
 
-        // 大于150g的苹果
+        // 大于150g的苹果（使用匿名函数代替自定义短函数）
         List<Apple> heavyApples2 = filterApples(inventory, (Apple a) -> a.getWeight() > 150);
         System.out.println(heavyApples2);
 
-        // 测试
+        // 谓词测试
         List<Apple> weirdApples = filterApples(inventory, (Apple a) -> a.getWeight() < 80 || "brown".equals(a.getColor()));
         System.out.println(weirdApples);
 
     }
 
+    /**
+     * 颜色比较传统写法
+     *
+     * @param inventory
+     * @return
+     */
     public static List<Apple> filterGreenApples(List<Apple> inventory) {
         List<Apple> result = new ArrayList<>();
         for (Apple apple : inventory) {
@@ -63,6 +70,12 @@ public class FilteringApples {
         return result;
     }
 
+    /**
+     * 重量比较传统写法
+     *
+     * @param inventory
+     * @return
+     */
     public static List<Apple> filterHeavyApples(List<Apple> inventory) {
         List<Apple> result = new ArrayList<>();
         for (Apple apple : inventory) {
@@ -81,6 +94,13 @@ public class FilteringApples {
         return apple.getWeight() > 150;
     }
 
+    /**
+     * 使用谓词统一颜色和重量比较代码，传递boolean的方法入参进行判断
+     *
+     * @param inventory
+     * @param p
+     * @return
+     */
     private static List<Apple> filterApples(List<Apple> inventory, Predicate<Apple> p) {
         List<Apple> result = new ArrayList<>();
         for (Apple apple : inventory) {
