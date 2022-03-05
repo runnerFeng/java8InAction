@@ -5,5 +5,7 @@
  *       2.Predicate<T>：使用谓词对boolean的参数做行为参数化
  *       3.串行，并行Stream
  *       4.default:默认方法关键字
+ *       5.函数式接口：只定义一个抽象方法的接口
+ *       6.Predict,Function,Consumer,Supplier,Opera...
  */
 package com.feng.chapter1;
