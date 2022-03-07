@@ -6,6 +6,6 @@
  *       3.串行，并行Stream
  *       4.default:默认方法关键字
  *       5.函数式接口：只定义一个抽象方法的接口
- *       6.Predict,Function,Consumer,Supplier,Opera...
+ *       6.Predict,Function,Consumer,Supplier,Opera...:https://juejin.cn/post/6844903849753329678
  */
 package com.feng.chapter1;
