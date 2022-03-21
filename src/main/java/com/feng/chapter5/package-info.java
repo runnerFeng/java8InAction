@@ -6,8 +6,8 @@
  * 2.映射：map():映射一个新的流,flatmap()：将各个流扁平化为一个流
  * 3.Arrays.stream():接收一个数组并产生一个流
  * 4.查找和匹配（短路操作）：allMatch,anyMatch,noneMatch,findAny,findFirst
- * 5.归约，reduce():1.接受两个参数和一个参数的方法；一个入参时没有初始值，故返回一个optional容器；两个入参时有初始值，故返回一个具体结果；
- * map，reduce的连接通常称为map-reduce模式，因google通常使用他来搜索而出名，因为他很容易并行化；
+ * 5.归约，reduce():1.接受两个参数和一个参数的方法，还有三个参数的方法；一个入参时没有初始值，故返回一个optional容器；两个入参时有初始值，
+ * 故返回一个具体结果；map，reduce的连接通常称为map-reduce模式，因google通常使用他来搜索而出名，因为他很容易并行化；
  * 6.stream().xxx.collect(toList());stream().xxx.collect(toSet())也可以返回set集合进行去重;
  * 7.reduce(BinaryOperator<T> t):可以根据入参lambda进行计算归约
  * 8.stream().xxx.collect(joining()),joining()方法可以连接字符串，内部使用StringBuilder()实现。
