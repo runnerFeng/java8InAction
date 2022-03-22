@@ -8,4 +8,4 @@
  * 3.汇总，统计最大值，最小值，平均值，sum,count:IntSummarizingStatistics;LongSummarizingStatistics;DoubleSummarizingStatistics;
  * 4.
  */
-package com.feng.chapter6.demo1;
+package com.feng.chapter6;
