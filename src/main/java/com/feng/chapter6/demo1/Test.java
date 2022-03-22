@@ -2,7 +2,6 @@ package com.feng.chapter6.demo1;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 /**
  * @author jinx
@@ -16,7 +15,7 @@ public class Test {
     list.add(1);
     list.add(2);
     list.add(3);
-    list.stream().collect(Collectors.re());
+//    list.stream().collect(Collectors.re());
 //    Collectors
 //    IntSummaryStatistics
     }

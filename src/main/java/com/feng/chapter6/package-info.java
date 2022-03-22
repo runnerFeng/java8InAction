@@ -6,6 +6,8 @@
  * 2.Collectors.counting();Collectors.maxBy();Collectors.minBy();Collectors.summingInt();Collectors.summingDouble();
  * Collectors.averagingInt(),averagingLong,averagingDouble();
  * 3.汇总，统计最大值，最小值，平均值，sum,count:IntSummarizingStatistics;LongSummarizingStatistics;DoubleSummarizingStatistics;
- * 4.
+ * 4.多级分组：Collectors.groupingBy()两个参数的方法实现多级分组
+ * 5.按子组收集数据Collectors.collectionAndThen()方法
+ * 6.分区：Collectors.partitionBy()特殊化的分组，由一个谓词作为分类函数，返回键是true/false的两组结果;
  */
 package com.feng.chapter6;
