@@ -17,4 +17,4 @@
  * 12.谓词Predict也可以用and,or,negate等连接组合更复杂的谓词
  * 13.复合函数：Function可以使用andThen,compose连接
  */
-package com.feng.chapter1;
+package com.feng.chapter1_3;

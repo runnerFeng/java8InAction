@@ -1,4 +1,4 @@
-package com.feng.chapter1.demo3;
+package com.feng.chapter1_3.demo3;
 
 import java.util.function.DoubleSupplier;
 
